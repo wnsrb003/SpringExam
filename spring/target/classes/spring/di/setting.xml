@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="exam" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10"/>
+	
+	
+<!-- 	<bean id="exam" class="spring.di.entity.NewlecExam">
+		<property name="kor" value="10"/>
+		<property name="eng" value="10"/>
+		<property name="math" value="10"/>
+		<property name="com" value="10"/>
+		<constructor-arg type= "float" name="kor" value="1.1"/>
+		<constructor-arg type= "float" name="eng" value="2.2"/>
+		<constructor-arg type= "float" name="math" value="3.6"/>
+		<constructor-arg type= "float" name="com" value="4.3"/>
+	</bean> -->
+	<bean id="console" class="spring.di.ui.GridExamConsole">
+		<property name="exam" ref="exam"/>
+	</bean>
+	
+	
+</beans>
