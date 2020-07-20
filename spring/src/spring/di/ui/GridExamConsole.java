@@ -18,6 +18,7 @@ public class GridExamConsole implements ExamConsole {
 	public void print() {
 
 		System.out.printf("Grid total is %d, avg is %f", exam.total(), exam.avg());
+		System.out.println("");
 	}
 
 	@Override
